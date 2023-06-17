@@ -1,0 +1,1 @@
+calc_docs_sorted_order(q_terms)[:20:]
