@@ -33,17 +33,7 @@ def get_problem_links():
             links.append(line)
     return links        
 
-"""
-"os.path.join()" is used to construct a valid path by joining individual path components together.
 
-Here's how os.path.join() works:
-
-1. It takes the first path component as the base directory or path segment.
-2. It iteratively appends the remaining components to the base path, separated by the appropriate path separator based on the underlying operating system.
-3. It constructs the final path by joining all the components together.
-
-Using os.path.join() helps ensure that your code is portable and works correctly across different platforms. It handles the differences in path separators automatically, making your code more robust and less prone to errors when working with file and directory paths.
-"""
 
 # add problem number(acc. to leetcode) & name to "index.txt" in (QDATA_FOLDER = Qdata) folder
 def add_problem_name_to_index_file(text):
