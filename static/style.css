@@ -1,0 +1,156 @@
+/* style.css */
+
+/* General styles */
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: #000000; /* Black background color */
+  margin: 0;
+  padding: 0;
+  border: 2px solid #7b09b0; /* Initial border color */
+  border-radius: 4px; /* Rounded edges */
+  box-sizing: border-box; /* Include border in element dimensions */
+  transition: border-color 0.3s ease; /* Border color transition */
+}
+
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #7b09b0;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: color 0.5s ease;
+}
+
+h1:hover {
+  color: #ff6600;
+}
+
+/* Hollow structure */
+h1::before,
+h1::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+h1::before {
+  margin-right: 10px;
+}
+
+h1::after {
+  margin-left: 10px;
+}
+
+/* Form styles */
+.form {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Results styles */
+.results {
+  margin-top: 30px;
+}
+
+.result {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #222222; /* Dark background color for result cards */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
+  border: 2px solid #7b09b0; /* Border color */
+}
+
+
+.result:nth-child(even) {
+  background-color: #333333; /* Alternate dark background color */
+}
+
+.result:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #4707db; /* Change background color on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.result a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.result a:hover {
+  text-decoration: underline;
+}
+
+.result p {
+  color: #cccccc; /* Text color for result card content */
+  margin: 0;
+}
+
+/* Link styles */
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Text styles */
+p {
+  color: #cccccc;
+  margin: 0;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');

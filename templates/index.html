@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Search Page</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<head>
+  <title>Search Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Leetcode Search</h1>
     <div class="form">
       <form method="POST">
-        {{ form.hidden_tag() }} {{ form.search.label }} {{ form.search() }} {{
-        form.submit() }}
+        {{ form.hidden_tag() }}
+        <label for="search">Search:</label>
+        {{ form.search() }}
+        {{ form.submit() }}
       </form>
     </div>
-    <div>
+    <div class="results">
       {% for result in results %}
-      <a href="{{ result['Question Link'] }}">{{ result['Question Link'] }}</a>
-      <p>Score: {{ result['Score'] }}</p>
+      <div class="result">
+        <a href="{{ result['Question Link'] }}">{{ result['Question Link'] }}</a>
+        <p>Score: {{ result['Score'] }}</p>
+      </div>
       {% endfor %}
     </div>
-  </body>
+  </div>
+</body>
 </html>
